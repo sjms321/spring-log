@@ -8,8 +8,8 @@
 <h1>
 	login success
 </h1>
-	<a href="/log/">logout</a>
-	<a href="">remove account</a>
-<P>   </P>
+	<p><a href="/log/sessionOUT">logout</a></p>
+	<p><a href="/log/removeOK">remove account</a></p>
+	<p><a href="/log/Update">update account</a> </p>
 </body>
 </html>

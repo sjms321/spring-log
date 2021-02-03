@@ -42,14 +42,15 @@ public class MemberService {
 			else return False;
 	}
 	public Member Login_Info(Member m) {
-		
+
 		Member mem = session.selectOne("memberMapper.Login", m);
 		
 		return mem;
 	}
 	public void Delete(Member m) {
-		
-		session.selectOne("memberMapper.Delete", m);
-		
+		session.selectOne("memberMapper.Delete", m);	
+	}
+	public void Update(Member m) {
+		session.selectOne("memberMapper.Update",m);
 	}
 }

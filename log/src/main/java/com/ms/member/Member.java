@@ -3,6 +3,20 @@ package com.ms.member;
 public class Member {
 	private String m_id;
 	private String m_pw;
+	private String m_name;
+	private String m_add;
+	public String getM_name() {
+		return m_name;
+	}
+	public void setM_name(String m_name) {
+		this.m_name = m_name;
+	}
+	public String getM_add() {
+		return m_add;
+	}
+	public void setM_add(String m_add) {
+		this.m_add = m_add;
+	}
 	public String getM_id() {
 		return m_id;
 	}

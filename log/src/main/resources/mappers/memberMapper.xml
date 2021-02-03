@@ -5,26 +5,34 @@
 <mapper namespace="memberMapper">
 
 	 <select id = "Id_Check" resultType="int">
-		select count(*) from member m
+		select count(*) from membermk m
 		where m.m_id = #{m_id}
 	</select>
 	 
 	<insert id = 'Register'>
-		INSERT INTO member (m_id, m_pw)
-		VALUES (#{m_id}, #{m_pw})
+		INSERT INTO membermk (m_id, m_pw,m_name,m_add)
+		VALUES (#{m_id}, #{m_pw}, #{m_name}, #{m_add})
 	</insert>
 	
 	<select id = "Login" resultType="int">
-		select count(*) from member m
+		select count(*) from membermk m
 		where m.m_id = #{m_id} and m.m_pw = #{m_pw}
 	</select> 
 	
 	 <select id = "Login_Info" resultType="Member">
-		select * from member m
+		select * from membermk m
 		where m.m_id = #{m_id} and m.m_pw = #{m_pw}
 	</select> 
 	<select id = "Delete" >
-		DELETE FROM member
-		where m.m_id = #{m_id} and m.m_pw = #{m_pw}
+		DELETE from membermk 
+		where m_id = #{m_id} and m_pw = #{m_pw}
+	</select> 
+
+	<select id = "Update" >
+		UPDATE membermk SET 
+		m_pw = #{m_pw},
+		m_name = #{m_name},
+		m_add = #{m_add}
+		where m_id = #{m_id}
 	</select> 
 </mapper>
