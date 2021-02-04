@@ -48,9 +48,9 @@ public class MemberService {
 		return mem;
 	}
 	public void Delete(Member m) {
-		session.selectOne("memberMapper.Delete", m);	
+		session.delete("memberMapper.Delete", m);	
 	}
 	public void Update(Member m) {
-		session.selectOne("memberMapper.Update",m);
+		session.update("memberMapper.Update",m);
 	}
 }

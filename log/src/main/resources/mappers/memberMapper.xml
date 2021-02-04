@@ -23,16 +23,17 @@
 		select * from membermk m
 		where m.m_id = #{m_id} and m.m_pw = #{m_pw}
 	</select> 
-	<select id = "Delete" >
+	
+	<delete id = "Delete" >
 		DELETE from membermk 
 		where m_id = #{m_id} and m_pw = #{m_pw}
-	</select> 
+	</delete> 
 
-	<select id = "Update" >
+	<update id = "Update" >
 		UPDATE membermk SET 
 		m_pw = #{m_pw},
 		m_name = #{m_name},
 		m_add = #{m_add}
 		where m_id = #{m_id}
-	</select> 
+	</update> 
 </mapper>
