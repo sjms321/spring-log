@@ -15,6 +15,6 @@
 		ADD : <input type="text" name="m_add" ><br>
 		<input type="submit" value="Update" >
 	</form>
-<a href = "/log/">Cancel</a>
+<a href = "/log/loginOk">Cancel</a>
 </body>
 </html>

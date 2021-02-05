@@ -9,8 +9,8 @@
 <h1>
 	로그인 성공!
 </h1>
-	<p><a href="/log/sessionOUT">logout</a></p>
-	<p><a href="/log/removeCHECK">remove account</a></p>
-	<p><a href="/log/Update">update account</a> </p>
+	<p><a href="/log/sessionOUT"><button>logout</button></a></p>
+	<p><a href="/log/removeCHECK"><button>remove account</button></a></p>
+	<p><a href="/log/Update"><button>update account</button></a> </p>
 </body>
 </html>

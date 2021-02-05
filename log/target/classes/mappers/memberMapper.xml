@@ -10,8 +10,8 @@
 	</select>
 	 
 	<insert id = 'Register'>
-		INSERT INTO membermk (m_id, m_pw,m_name,m_add)
-		VALUES (#{m_id}, #{m_pw}, #{m_name}, #{m_add})
+		INSERT INTO membermk (m_id, m_pw,m_name,m_add,m_hint)
+		VALUES (#{m_id}, #{m_pw}, #{m_name}, #{m_add},#{m_hint})
 	</insert>
 	
 	<select id = "Login" resultType="int">
@@ -36,4 +36,14 @@
 		m_add = #{m_add}
 		where m_id = #{m_id}
 	</update> 
+	
+	 <select id = "find_PW" resultType="String">
+		select m_pw from membermk m
+		where m.m_id = #{m_id} and m.m_hint = #{m_hint}
+	</select>
+	
+	<select id = "IDhint_check" resultType="int">
+		select count(*) from membermk m
+		where m.m_id = #{m_id} and m.m_hint = #{m_hint}
+	</select>
 </mapper>

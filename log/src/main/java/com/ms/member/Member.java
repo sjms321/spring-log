@@ -5,6 +5,13 @@ public class Member {
 	private String m_pw;
 	private String m_name;
 	private String m_add;
+	private String m_hint;
+	public String getM_hint() {
+		return m_hint;
+	}
+	public void setM_hint(String m_hint) {
+		this.m_hint = m_hint;
+	}
 	public String getM_name() {
 		return m_name;
 	}

@@ -53,4 +53,13 @@ public class MemberService {
 	public void Update(Member m) {
 		session.update("memberMapper.Update",m);
 	}
+	
+	public String find_PW(Member m) {
+		return session.selectOne("memberMapper.find_PW", m);
+	}
+
+	
+	public int IDhint_check(Member m) {
+		return session.selectOne("memberMapper.IDhint_check", m);
+	}
 }
