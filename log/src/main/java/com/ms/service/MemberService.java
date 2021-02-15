@@ -1,9 +1,11 @@
 package com.ms.service;
 
+import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.naming.spi.DirStateFactory.Result;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.ms.member.Member;
@@ -14,7 +16,8 @@ public class MemberService {
 	public static final int True = 1;
 	public static final int False = 0;
 	
-	@Inject
+	
+	@Autowired
 	private SqlSession session;
 	
 	
@@ -26,6 +29,14 @@ public class MemberService {
 		}
 	}
 	public int Id_Check(Member m) {
+		try {
+			return session.selectOne("memberMapper.Id_Check", m);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return False;
+		}
+	}
+	public int PW_Check(Member m) {
 		try {
 			return session.selectOne("memberMapper.Id_Check", m);
 		} catch (Exception e) {
